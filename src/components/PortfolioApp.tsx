@@ -20,7 +20,7 @@ const PortfolioApp: React.FC = () => {
         Welcome to My Digital Portfolio
       </div>
       
-      <div className="ascii-art text-sm mb-6">
+      <div className="ascii-art text-[0.5rem] sm:text-xs md:text-sm mb-6 overflow-x-auto">
 {`    ┌───────────────────────────────────────────────────────────────────────────┐
     │                                                                           │
     │    ██╗     ██╗   ██╗██╗███████╗    ███████╗ ██████╗ ████████╗ ██████╗     │

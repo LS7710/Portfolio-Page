@@ -69,7 +69,7 @@ const StartupAnimation: React.FC<StartupAnimationProps> = ({ onComplete }) => {
     >
       <div className="max-w-4xl w-full">
         {/* ASCII Art */}
-        <div className="ascii-art text-center mb-8 animate-fade-in">
+        <div className="ascii-art text-center mb-8 animate-fade-in text-[0.4rem] sm:text-xs md:text-sm overflow-x-auto">
           {asciiArt}
         </div>
 
