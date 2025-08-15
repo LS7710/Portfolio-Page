@@ -55,9 +55,11 @@ const PortfolioApp: React.FC = () => {
         </div>
 
         <div className="terminal-text-dim text-sm">
-          💡 Tip: Use the quick command buttons below or type commands manually. 
-          Arrow keys navigate through command history.
+          💡 Tip: Use the quick command buttons below or type commands manually. <br />
+          Arrow keys navigate through command history. <br /><br /><br /><br /><br /><br /><br /><br /><br />
+          💻 For the best experience open this page on a desktop browser.
         </div>
+        
       </div>
     </div>
   );
