@@ -275,11 +275,11 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
             An interactive wellness app, with the purpose of helping people with ADHD and other similar mentall ilnesses, to take control of their lives by providing an all purpose tool, with several features like daily habit tracjers and even a virtual reality relaxation space
           </div>
         </div>
-
-        <div className="mt-4 text-xs terminal-text-dim">
+                {/* This is for text under projects, not realy needed rn */}
+        {/* <div className="mt-4 text-xs terminal-text-dim">
           Use commands like 'cd project-name' to explore individual projects or 
           'git clone &lt;repo&gt;' to view source code.
-        </div>
+        </div> */}
       </div>
     </div>
   </div>;
