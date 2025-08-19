@@ -337,8 +337,7 @@ const PortfolioApp: React.FC = () => {
               </div>
               
               <div className="text-sm terminal-text-dim">
-                Select the resume that best matches the position you're applying for.
-                Both resumes are available in PDF format.
+                Select which of my resumes you would like to download. Both are in PDF format.<br/>
               </div>
             </div>
           </div>
