@@ -594,7 +594,7 @@ export const HelpSection = () => <div className="space-y-4 animate-slide-up">
         <div className="mt-4 p-3 border border-border rounded">
           <div className="terminal-text-bright mb-2">Easter Eggs & Fun Commands:</div>
           <div className="text-sm space-y-1">
-            <div>Try typing: <span className="font-mono terminal-text-bright">whoami</span>, <span className="font-mono terminal-text-bright">date</span>, <span className="font-mono terminal-text-bright">uname</span></div>
+            <div>Try typing: <span className="font-mono terminal-text-bright">ls</span>, <span className="font-mono terminal-text-bright">date</span>, <span className="font-mono terminal-text-bright">uname</span></div>
             <div>For fun: <span className="font-mono terminal-text-bright">holby</span></div>
           </div>
         </div>
