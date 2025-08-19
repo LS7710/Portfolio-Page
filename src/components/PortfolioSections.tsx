@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
 import { Download, Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 // About Section
@@ -285,14 +286,21 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
 
 // Resume Section
 export const ResumeSection = () => {
-  const handleDownloadResume = () => {
-    // Trigger actual PDF download
-    const resumeUrl = '/public/resume.pdf' ; // Path to your resume file in the public folder
+  const handleDownloadResume = (type: 'cybersecurity' | 'software-dev') => {
+    const resumeUrls = {
+      'cybersecurity': '/cybersecurity-resume.pdf',
+      'software-dev': '/software-dev-resume.pdf'
+    };
+    
+    const filenames = {
+      'cybersecurity': 'Luis_Soto_Cybersecurity_Resume.pdf',
+      'software-dev': 'Luis_Soto_Software_Dev_Resume.pdf'
+    };
     
     // Create a temporary anchor element to trigger download
     const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Luis_Soto_Resume.pdf'; // The filename that will be downloaded
+    link.href = resumeUrls[type];
+    link.download = filenames[type];
     link.target = '_blank'; // Open in new tab as fallback
     
     // Append to document, click, and remove
@@ -333,14 +341,15 @@ export const ResumeSection = () => {
 
               <div>
                 <div className="flex justify-between items-start mb-1">
-                  <div className="terminal-text-bright">Website Creation</div>
-                  <div className="terminal-text-dim text-xs">2024</div>
+                  <div className="terminal-text-bright">Web Development, Tool Creation & Coding Tutor</div>
+                  <div className="terminal-text-dim text-xs">2024 - Current</div>
                 </div>
-                <div className="terminal-text-dim text-sm mb-2">Amity's Desings</div>
+                <div className="terminal-text-dim text-sm mb-2">Freelance Software Developer</div>
                 <ul className="text-sm space-y-1 list-disc ml-4">
-                  <li>Hired to create the companies website with all the feature the owner wished to include</li>
-                  <li>Layed the foundation for future expanshion of the page, so that it may contain a marketplace for customers to purchase directly</li>
-                  <li>Often give the page maintance and updates whenever the owner wishes to make changes</li>
+                  <li>Designed and created websites for local companies following clients’ vision and specifications </li>
+                  <li>Created custom portfolio pages for students and career professionals.</li>
+                  <li>Created custom tools and scripts for data analysis for students studying Bioinformatics in college.</li>
+                  <li>Served as a coding tutor, mentoring new programmers and assisting computer science students with coursework and projects.</li>
                 </ul>
               </div>
 
@@ -390,15 +399,43 @@ export const ResumeSection = () => {
           </div>
 
           <div className="flex gap-4 mt-6">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="terminal-link"
-              onClick={handleDownloadResume}
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Download Complete Resume
-            </Button>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="terminal-link"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent className="terminal-screen border border-border max-w-md">
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="terminal-text-bright">Select Resume Type</AlertDialogTitle>
+                  <AlertDialogDescription className="terminal-text">
+                    Which resume would you like to download?
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter className="flex-col gap-2 sm:flex-row">
+                  <AlertDialogCancel className="terminal-text">Cancel</AlertDialogCancel>
+                  <div className="flex flex-col gap-2 sm:flex-row">
+                    <AlertDialogAction 
+                      onClick={() => handleDownloadResume('cybersecurity')}
+                      className="terminal-text text-sm"
+                    >
+                      Cybersecurity
+                    </AlertDialogAction>
+                    <AlertDialogAction 
+                      onClick={() => handleDownloadResume('software-dev')}
+                      className="terminal-text text-sm"
+                    >
+                      Software Dev
+                    </AlertDialogAction>
+                  </div>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
         </div>
       </div>

@@ -140,14 +140,26 @@ const PortfolioApp: React.FC = () => {
   };
 
   const handleDownloadResume = () => {
-    // Trigger actual PDF download
-    const resumeUrl = '/resume.pdf'; // Path to your resume file in the public folder
+    // Show resume selection instead of automatic download
+    setCurrentSection('download-selection');
+  };
+
+  const handleDownloadResumeType = (type: 'cybersecurity' | 'software-dev') => {
+    const resumeUrls = {
+      'cybersecurity': '/cybersecurity-resume.pdf',
+      'software-dev': '/software-dev-resume.pdf'
+    };
+    
+    const filenames = {
+      'cybersecurity': 'Luis_Soto_Cybersecurity_Resume.pdf',
+      'software-dev': 'Luis_Soto_Software_Dev_Resume.pdf'
+    };
     
     try {
       // Create a temporary anchor element to trigger download
       const link = document.createElement('a');
-      link.href = resumeUrl;
-      link.download = 'Luis_Soto_Resume.pdf'; // The filename that will be downloaded
+      link.href = resumeUrls[type];
+      link.download = filenames[type];
       link.target = '_blank'; // Open in new tab as fallback
       
       // Append to document, click, and remove
@@ -299,6 +311,38 @@ const PortfolioApp: React.FC = () => {
             </div>
           </div>
         );
+      case 'download-selection':
+        return (
+          <div className="animate-slide-up">
+            <div className="command-prompt">$ wget resume.pdf</div>
+            <div className="terminal-text">
+              <div className="mb-4">
+                <div className="terminal-text-bright">Select Resume Type</div>
+                <div className="mb-4">Which resume would you like to download?</div>
+              </div>
+              
+              <div className="flex gap-4 mb-4">
+                <button 
+                  onClick={() => handleDownloadResumeType('cybersecurity')}
+                  className="terminal-link border border-border rounded px-3 py-1 hover:terminal-text-bright transition-colors"
+                >
+                  → Cybersecurity Resume
+                </button>
+                <button 
+                  onClick={() => handleDownloadResumeType('software-dev')}
+                  className="terminal-link border border-border rounded px-3 py-1 hover:terminal-text-bright transition-colors"
+                >
+                  → Software Dev Resume
+                </button>
+              </div>
+              
+              <div className="text-sm terminal-text-dim">
+                Select the resume that best matches the position you're applying for.
+                Both resumes are available in PDF format.
+              </div>
+            </div>
+          </div>
+        );
       case 'download':
         return (
           <div className="animate-slide-up">
@@ -310,7 +354,7 @@ const PortfolioApp: React.FC = () => {
               <div className="mb-4">Saving to: 'Luis_Soto_Resume.pdf'</div>
               <div className="terminal-text-bright mb-4">Download complete!</div>
               <div className="text-sm terminal-text-dim">
-                Your resume PDF download has been initiated. Check your downloads folder for 'Luis_Soto_Resume.pdf'.
+                Your resume PDF download has been initiated. Check your downloads folder.
                 You can also use the download button in the /resume section.
               </div>
             </div>
