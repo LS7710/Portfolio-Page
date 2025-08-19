@@ -247,7 +247,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
           </div>
           <div className="terminal-text-dim text-sm mb-2">Python</div>
           <div className="text-sm">
-            This is a quick and simple, single-command reconissance tool meant to be used through the CLI to quickly gather a handful of commonly used information from a website by pentesters and security analysts
+            A Reconnisannce CLI tool that extracts most of the commonly sought after information from a target website, during the recconaissance stage of a penetration test.
           </div>
         </div>
 
@@ -273,6 +273,56 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
           <div className="terminal-text-dim text-sm mb-2">React, HTML, CSS, Javascript, Three.js, WebGL, WebXR</div>
           <div className="text-sm">
             An interactive wellness app, with the purpose of helping people with ADHD and other similar mentall ilnesses, to take control of their lives by providing an all purpose tool, with several features like daily habit tracjers and even a virtual reality relaxation space
+          </div>
+        </div>
+
+        <div className="border border-border rounded p-4">
+          <div className="flex justify-between items-start mb-2">
+            <div className="terminal-text-bright">Sentinel Virtual S.O.C. (Security Operations Center)</div>
+            <div className="flex gap-2">
+              {/* <Button 
+                size="sm" 
+                variant="outline" 
+                className="text-xs h-6"
+                onClick={() => window.open('', '_blank')}
+              >
+                <Github className="w-3 h-3 mr-1" />
+                Code
+              </Button> */}
+              {/* <Button size="sm" variant="outline" className="text-xs h-6">
+                <ExternalLink className="w-3 h-3 mr-1" />
+                Live
+              </Button> */}
+            </div>
+          </div>
+          <div className="terminal-text-dim text-sm mb-2">ELK, Wazuh, TheHive, Cortex, Shuffle, Ansible, Sysmon</div>
+          <div className="text-sm">
+            A Containerized Virtual Security Operations Center, designed to provide hands-on training for blue team analysts in threat detection, and incident response.
+          </div>
+        </div>
+
+        <div className="border border-border rounded p-4">
+          <div className="flex justify-between items-start mb-2">
+            <div className="terminal-text-bright">Terminal Portfolio Website</div>
+            <div className="flex gap-2">
+              <Button 
+                size="sm" 
+                variant="outline" 
+                className="text-xs h-6"
+                onClick={() => window.open('', '_blank')}
+              >
+                <Github className="w-3 h-3 mr-1" />
+                Code
+              </Button>
+              {/* <Button size="sm" variant="outline" className="text-xs h-6">
+                <ExternalLink className="w-3 h-3 mr-1" />
+                Live
+              </Button> */}
+            </div>
+          </div>
+          <div className="terminal-text-dim text-sm mb-2">React, TypeScript, Tailwind CSS</div>
+          <div className="text-sm">
+            A retro-style portfolio website with terminal interface, Inspired by the fallout games, with working CLI navigation
           </div>
         </div>
                 {/* This is for text under projects, not realy needed rn */}
