@@ -23,7 +23,7 @@ const StartupAnimation: React.FC<StartupAnimationProps> = ({ onComplete }) => {
 
   const bootSequence = [
     'PORTFOLIO SYSTEM v2.1',
-    'Copyright (c) 2025 Some made up company lmao',
+    'Copyright (c) 2025 Vault-tec',
     '',
     'Initializing memory modules... [OK]',
     'Loading portfolio data... [OK]',
