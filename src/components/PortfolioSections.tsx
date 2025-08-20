@@ -220,7 +220,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
               </Button> */}
             </div>
           </div>
-          <div className="terminal-text-dim text-sm mb-2">React, TypeScript, Tailwind CSS</div>
+          <div className="terminal-text-dim text-sm mb-2">React, HTML, Javascript, TypeScript, CSS, Tailwind CSS</div>
           <div className="text-sm">
             A retro-style portfolio website with terminal interface, Inspired by the fallout games, with working CLI navigation
           </div>
@@ -303,7 +303,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
 
         <div className="border border-border rounded p-4">
           <div className="flex justify-between items-start mb-2">
-            <div className="terminal-text-bright">Terminal Portfolio Website</div>
+            <div className="terminal-text-bright">Amity's Designs Company Website</div>
             <div className="flex gap-2">
               <Button 
                 size="sm" 
@@ -320,9 +320,34 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
               </Button> */}
             </div>
           </div>
-          <div className="terminal-text-dim text-sm mb-2">React, TypeScript, Tailwind CSS</div>
+          <div className="terminal-text-dim text-sm mb-2">React, HTML CSS, Tailwind CSS, JavaScript</div>
           <div className="text-sm">
-            A retro-style portfolio website with terminal interface, Inspired by the fallout games, with working CLI navigation
+            Designed and created company’s website based on the clients’ requests and specifications. Developed the website with a scalable architecture to support future feature expansions, including a marketplace and admin panel.
+          </div>
+        </div>
+
+        <div className="border border-border rounded p-4">
+          <div className="flex justify-between items-start mb-2">
+            <div className="terminal-text-bright">Custom Bash Shell</div>
+            <div className="flex gap-2">
+              <Button 
+                size="sm" 
+                variant="outline" 
+                className="text-xs h-6"
+                onClick={() => window.open('', '_blank')}
+              >
+                <Github className="w-3 h-3 mr-1" />
+                Code
+              </Button>
+              {/* <Button size="sm" variant="outline" className="text-xs h-6">
+                <ExternalLink className="w-3 h-3 mr-1" />
+                Live
+              </Button> */}
+            </div>
+          </div>
+          <div className="terminal-text-dim text-sm mb-2">C (Programming Language)</div>
+          <div className="text-sm">
+            Created a custom shell in C, with the purpose of learning how shells work and how to create one from scratch. It has basic functionality like command execution, piping, and redirection, as well as some custom commands and features.
           </div>
         </div>
                 {/* This is for text under projects, not realy needed rn */}
