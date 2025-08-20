@@ -209,7 +209,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
                 size="sm" 
                 variant="outline" 
                 className="text-xs h-6"
-                onClick={() => window.open('', '_blank')}
+                onClick={() => window.open('https://github.com/LS7710/Portfolio-Page', '_blank')}
               >
                 <Github className="w-3 h-3 mr-1" />
                 Code
