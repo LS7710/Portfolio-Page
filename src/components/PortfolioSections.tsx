@@ -305,7 +305,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
           <div className="flex justify-between items-start mb-2">
             <div className="terminal-text-bright">Amity's Designs Company Website</div>
             <div className="flex gap-2">
-              <Button 
+              {/* <Button 
                 size="sm" 
                 variant="outline" 
                 className="text-xs h-6"
@@ -313,7 +313,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
               >
                 <Github className="w-3 h-3 mr-1" />
                 Code
-              </Button>
+              </Button> */}
               {/* <Button size="sm" variant="outline" className="text-xs h-6">
                 <ExternalLink className="w-3 h-3 mr-1" />
                 Live
@@ -330,7 +330,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
           <div className="flex justify-between items-start mb-2">
             <div className="terminal-text-bright">Custom Bash Shell</div>
             <div className="flex gap-2">
-              <Button 
+              {/* <Button 
                 size="sm" 
                 variant="outline" 
                 className="text-xs h-6"
@@ -338,7 +338,7 @@ export const ProjectsSection = () => <div className="space-y-4 animate-slide-up"
               >
                 <Github className="w-3 h-3 mr-1" />
                 Code
-              </Button>
+              </Button> */}
               {/* <Button size="sm" variant="outline" className="text-xs h-6">
                 <ExternalLink className="w-3 h-3 mr-1" />
                 Live
